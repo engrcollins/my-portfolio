@@ -151,7 +151,7 @@ var settings = {
 
   return (
     <Layout>
-    <SEO title="Resume" description="View Collins Akinbami's resume here" />
+    <SEO title="Queen's Birthday" description="Celebrating Ajayi Grace Olanike" />
     <div align="center">
       <h3>Hurray!!! It's Queen's Birthday!</h3>
         <Grid container>
@@ -174,7 +174,7 @@ var settings = {
                             <Card.Subtitle style={{ fontSize:'11px', fontStyle:'italic'}} >Date Posted: {user.date.substr(0, 24)}</Card.Subtitle>
                             <Row>
                               <Col xs={12} md={6}>
-                                <Card.Img variant="center" src={pics[Math.floor(Math.random() * 4)]} style={{width:"300px", maxHeight:"400px", margin:'5px', borderRadius:"20px"}} />
+                                <Card.Img src={pics[Math.floor(Math.random() * 4)]} style={{maxWidth:"402px", maxHeight:"500px", margin:'2px', borderRadius:"20px"}} />
                               </Col>
                               <Col xs={12} md={6}>    
                                   <Card.Text style={{paddingTop:"20%"}}>

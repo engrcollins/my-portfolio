@@ -4,7 +4,7 @@
    
    .appContent{
      position: relative;
-     min-width: 410px;
+     min-width: 430px;
      min-height: 920px;
      max-width: 1218px;
      align-items: center;
@@ -19,16 +19,17 @@
    .flip-box {
      background-color: transparent;
      width: 100%;
-     height: 100%;
-     margin: 2px 1px 2px 5px;
+     max-height: 100%;
+     margin: 2px;
      border: 1px solid #f1f1f1;
      perspective: 1000px;
+     border: 1px solid;
    }
    
    .flip-box-inner {
      position: relative;
      width: 100%;
-     height: 100%;
+     max-height: 100%;
      text-align: center;
      transition: transform 0.8s;
      transform-style: preserve-3d;
@@ -41,7 +42,7 @@
    .flip-box-front, .flip-box-back {
      position: absolute;
      width: 100%;
-     height: 100%;
+     max-height: 100%;
      backface-visibility: hidden;
    }
    
@@ -56,15 +57,31 @@
    
    .form, .users {
      margin: 0px auto;
-     width: 70%;
    }
    
+   .imgs{
+       position: absolute;
+       z-index: -5;
+   }
+
+   .bgImage{
+       position: relative;
+       width: 99%;
+       opacity: 0.18;
+       z-index: -10;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: row;
+   }
+
    .form {
      display: flex;
      max-height: 90%;
      justify-content: center;
      align-content: center;
      flex-direction: column;
+     font-weight: 800;
    }
    
    .form > div {
@@ -94,11 +111,12 @@
    slideshow{
      position: relative;
      display: flex;
+     width: 96%%;
      max-height: 95%;
      justify-content: center;
      align-content: center;
      flex-direction: column;
-     margin: 4px;
+     margin: 1px;
    }
    
    .successMsg{

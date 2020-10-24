@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { TextField } from '@material-ui/core';
-import { Button } from 'react-bootstrap'
+import { Button, Image } from 'react-bootstrap'
 import axios from 'axios';
+import Queen1 from '../images/queen-2.jpg';
+import Queen2 from '../images/queen-2.jpg';
 
 const Form = (props) => {
   const initialUser = {
@@ -53,10 +55,15 @@ const Form = (props) => {
       }
   };
     return (
+      <div>
+        <div className='imgs'>
+         <Image align='center' src={Queen2} className='bgImage' style={{ maxWidth:"425px", maxHeight:"500px", margin:'2px', borderRadius:"20px" }} />
+        </div>
       <form className="form noValidate" autoComplete="off" onSubmit={saveWishes}>
         <h2 align="center">Send her your wishes...</h2>
         <TextField
-          id="standard-dense"
+          id="filled-basic"
+          variant='outlined'
           value={user.name}
           label="Your full name"
           name="name"
@@ -67,7 +74,8 @@ const Form = (props) => {
         <TextField
           name="msgTitle"
           value={user.msgTitle}
-          id="standard-dense"
+          id="filled-basic"
+          variant='outlined'
           onChange={handleChange}
           label="Message Title"
         />
@@ -75,7 +83,9 @@ const Form = (props) => {
 
         <TextField
           name="msgContent"
+          variant='outlined'
           value={user.msgContent}
+          id="outlined-multiline-static"
           multiline
           rows={5}
           rowsMax={6}
@@ -89,17 +99,18 @@ const Form = (props) => {
         {
           submitted ? 
           (
-          <button class="btn btn-primary" type="button" disabled>
+          <button align='center' class="btn btn-primary" type="button" disabled>
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
             Submitting...
           </button>
         ) : (
-          <Button color="primary" class="btn btn-primary" onClick={saveWishes} >
+          <Button align='center' color="primary" class="btn btn-primary" onClick={saveWishes} >
             Submit
           </Button>
         )
         }
       </form>
+      </div>
     );
   }
 

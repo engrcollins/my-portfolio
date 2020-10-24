@@ -1,0 +1,72 @@
+@import "~bootstrap/scss/bootstrap";
+
+$primaryColor: #464646;
+$secondaryColor: #f44f18;
+$mainWhite: #fff;
+
+* {
+  box-sizing: border-box;
+  //outline: 2px solid red;
+}
+
+body {
+  color: $primaryColor;
+  font-size: 100%;
+  margin: 0;
+  line-height: 1.4283;
+  font-family: "Segoe UI", Roboto, Verdana, "Helvetica Neue", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+}
+a {
+  color: $secondaryColor;
+  text-decoration: none;
+}
+
+.socialMedia{
+  display: inline-flex;
+  margin: 0;
+}
+
+.socialMedia div{
+  margin: 2px;
+
+}
+
+.fa{
+  padding: 10px;
+  margin: 4px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+.fa-github{
+  background: rgb(99, 99, 99);
+  color: white;
+}
+
+.fa-twitter{
+  background: #678fe6;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-stackOverflow {
+  background: #007bb5;
+  color: white;
+  padding: 8px;
+  margin: 5px;
+}
+
+

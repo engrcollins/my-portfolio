@@ -1,0 +1,51 @@
+---
+title: "Landing Page"
+date: "2010-08-13"
+---
+<div>
+    <p style="width:60%; height:200px; float:left; margin:4px">
+        <b style="font-size:28px">Hi, my name is <span style="color:blue">Collins Akinbami.</span></b>
+        </br>
+        <b style="font-size:18px">A Software Developer, Telecoms Engineer and budding Cloud Engineer.</b>
+        </br></br>
+        <i style="font-size:16px"> If you have a web project or creative need that I can help with, please contact me👇:</i>
+        </>
+        <br>
+        <a href="https://github.com/engrcollins" target="_blank">Github</a> &nbsp;
+        <a href="https://twitter.com/engrcollins14" target="_blank">Twitter</a> &nbsp;
+        <a href="https://www.linkedin.com/in/collins-akinbami-81b58270/" target="_blank">LinkedIn</a>
+        <br>
+    </p>
+    <p style="width:34%; height:200px; float:right; margin:4px">
+        </br></br>
+        <img src="../images/dev.png"  alt="developer at work" width = 960px height = 940px>
+    </p>
+    </br>
+</div>
+</br></br>
+
+### <b>About me</b>
+I'm passionate about open-source and technology in general. I have extensive experience with designing and developing websites using HTML5, CSS, JavaScript, ReactJS, jQuery, Bootstrap, Material UI, NodeJS and PHP.
+If I am not coding, you can find me reading, working out or watching football.
+
+
+### <b>Tools I Can Use</b>
+
+
+### <b>Latest Projects</b>
+
+
+
+### <b>Featured Writings</b>
+
+### <b>Contact me</b>
+I'm currently available for freelance projects or full-time work. If you're interested in working with me, please get in touch using one of the methods below. Or feel free to just say hi. I like that too.
+
+<b>Have a project in mind? Contact me directly:</b>
+>Collins Akinbami. </br>
+>akinbamicollins@gmail.com
+
+<b>Follow me online:</b>
+* Twitter - https://twitter.com/engrcollins14
+* Github - https://github.com/engrcollins
+* LinkedIn - https://www.linkedin.com/in/collins-akinbami-81b58270/

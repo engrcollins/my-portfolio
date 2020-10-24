@@ -1,0 +1,30 @@
+.content {
+    h1 {
+      font-size: 35px;
+      margin: 0 0 10px;
+      text-align: center;
+    }
+
+    div{
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 17px;
+    }
+  }
+  .meta {
+    font-size: 13px;
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: rgba(148, 150, 146, 0.815);
+  }
+  .featured {
+    max-height: 330px;
+    margin-bottom: 25px;
+  }
+
+  .fa{
+    border-radius: 10% !important;
+    padding: 10px;
+    margin: 4px;
+  }

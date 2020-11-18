@@ -3,7 +3,7 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import headerStyles from "./header.module.scss"
 import Image from "./image.js"
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 
 const Header = ({ siteTitle }) => {
@@ -38,10 +38,12 @@ const Header = ({ siteTitle }) => {
         </Col>
       </Row>
       </Container>
-      <nav className={headerStyles.navContainer}>
+
+
+      {/*<nav className={headerStyles.navContainer}>
         <ul className={headerStyles.navList}>
           <Link to="/">
-              <Button variant="light" size="sm" activeClassName={headerStyles.activeMenuItem }>Home</Button>
+              
           </Link>
           <Link to="/blog/">
             <Button variant="light" size="sm" activeClassName={headerStyles.activeMenuItem}>Blog</Button>
@@ -52,11 +54,12 @@ const Header = ({ siteTitle }) => {
           <Link to="/contact/">
             <Button variant="light" size="sm" activeClassName={headerStyles.activeMenuItem}>Contact</Button>
           </Link>
-         {/* <Link to="/resume/">
+         { <Link to="/resume/">
             <Button variant="light" size="sm" activeClassName={headerStyles.activeMenuItem}>Resume</Button>
-          </Link>*/}
+          </Link>}
         </ul>
       </nav>
+    */}
     </header>
   )
 }

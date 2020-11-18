@@ -17,11 +17,9 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Loader from 'react-loader-spinner';
 import axios from 'axios';
 import './queen-birthday.css';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { Container, Row, Col} from 'react-bootstrap';
 import SEO from "../components/seo";
+import $ from 'jquery';
 
 
 const Birthday = () => {
@@ -30,7 +28,7 @@ const Birthday = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isFlipped, setIsFlipped] = useState(false);
   const listHeight = 500;
-  const listWidth = 450;
+  const listWidth = 420;
   var pics = [Queen1, Queen2, Queen3, Queen4]
   
   useEffect(() => {
@@ -88,25 +86,50 @@ const deleteMessage = async (messageId) =>{
 
 const { isEmpty } = require('lodash');
 
-const flip2Back = (e) =>{
-  setIsFlipped(true)
-  var element = document.getElementById('flipper');
-  if (element.classList.contains('flipped')){
-    return
-    }
-    else {
-      element.classList.add('flipped')
-    }
-};
-const flip2Front = (e) =>{
-  var element = document.getElementById('flipper');
-  if (element.classList.contains('flipped')){
-      element.classList.remove('flipped')
+const rotateCard = (e) =>{
+  var card = document.getElementById ('manual')
+  console.log(card);
+  if(card.classList.contains('hover')){
+      card.classList.remove('hover');
+  } else {
+      card.classList.add('hover');
   }
-  setIsFlipped(false)
-};
+}
 
+const shift = () =>{
+  var contentstack = $('.contentstack');
+  var currentItem = contentstack.filter('.activestack');
+  console.log(contentstack)
+  console.log(currentItem)
+  var steps = $('.cardstack').filter('.steps');
+  var inactive1 = $('.inactive-1');
+  var inactive2 = $('.inactive-2');
 
+  var nextItem = currentItem.next();
+  var lastItem = contentstack.last();
+  var contentstackFirst = contentstack.first();
+
+  currentItem.removeClass('activestack');
+
+  if (currentItem.is(lastItem)) {
+      currentItem = contentstackFirst.addClass('activestack');
+      currentItem.css({'right': '10%', 'opacity': '1'});
+      $('.step').animate({width: '33%'});
+      inactive1.animate({height: '8px', marginLeft:'20px', marginRight:'20px'}, 100);
+      inactive2.animate({height: '8px', marginLeft:'10px', marginRight:'10px'}, 100);
+
+  } else if (currentItem.is(contentstackFirst)) {
+      currentItem.animate({opacity: 0}, 1000);
+      currentItem = nextItem.addClass('activestack');
+      $('.step').animate({width: '66%'});
+      inactive2.animate({height: '0', marginLeft:'0px', marginRight:'0px'}, 100);
+
+  } else {
+      currentItem = nextItem.addClass('activestack');
+      $('.step').animate({width: '100%'});
+      inactive1.animate({height: '0', marginLeft:'0px', marginRight:'0px'}, 100);
+  } 
+}
 const searchList= (e) =>{ 
   let searchInput = e.target.value;
   searchInput = searchInput.toLowerCase();
@@ -155,49 +178,61 @@ var settings = {
     <div align="center">
       <h3>Hurray!!! It's Queen's Birthday!</h3>
         <Grid container>
-        <Grid item xs={10} sm={7} className="appContent">
-        <div align="center" className="flip-box" id="flipper">
-          <div class="flip-box-inner">
-            <div class="flip-box-front">
-            <Form users={users} fetchUsers={fetchUsers} flip2Back={flip2Back} />
-            </div>
-            <div class="flip-box-back" >
-              <div className="slideshow">
-                {isFlipped ? (
-                  <Slider {...settings}>
-                    {users.map((user, index) => (
-                    <div>
-                      <Card bg="primary" style={{ height:'100%', width:'100%', textAlign:'center'}} className={'cardy'}>
-                        <Container>
-                          <Card.Body>
-                            <Card.Title>{user.msgTitle}</Card.Title>
-                            <Card.Subtitle style={{ fontSize:'11px', fontStyle:'italic'}} >Date Posted: {user.date.substr(0, 24)}</Card.Subtitle>
-                            <Row>
-                              <Col xs={12} md={6}>
-                                <Card.Img src={pics[Math.floor(Math.random() * 4)]} style={{maxWidth:"402px", maxHeight:"500px", margin:'2px', borderRadius:"20px"}} />
-                              </Col>
-                              <Col xs={12} md={6}>    
-                                  <Card.Text style={{paddingTop:"20%"}}>
-                                    {user.msgContent}
-                                  </Card.Text>
-                              </Col>
-                            </Row>
-                            </Card.Body>
-                          </Container>
-                          <Card.Footer>with love from {user.name}</Card.Footer>
-                        </Card>
+        <Grid item xs={11} md={6} className="appContent">
+        <div className="card-container manual-flip" id="manual">
+          <div className="card">
+             <div className="front">
+               <div class="contstack">
+                <div class="inner-contstack">          
+                    <div class="cardstack inactive-1"></div>
+                    <div class="cardstack inactive-2"></div>
+                    <div class="cardstack">
+                      {users.map((user, index) => (
+                          <div class="contentstack activestack">
+                            <Card bg="primary" style={{ textAlign:'center', color:'whitesmoke'}} className={'cardy'}>
+                              <Container>
+                              <Card.Body>
+                                <Card.Title>{user.msgTitle}</Card.Title>
+                                <Card.Subtitle style={{ fontSize:'12px', fontStyle:'italic'}} >Date Posted: {user.date.substr(0, 24)}</Card.Subtitle>
+                                <br />
+                                <Row>
+                                  <Col xs={12} md={6}>
+                                    <Card.Img src={pics[Math.floor(Math.random() * 4)]} style={{maxWidth:"300px", maxHeight:"350px", minHeight:"220px", margin:'2px', borderRadius:"20px"}} />
+                                  </Col>
+                                  <Col xs={12} md={6}>    
+                                      <Card.Text style={{height:"110px"}}>
+                                        {user.msgContent}
+                                      </Card.Text>
+                                  </Col>
+                                </Row>
+                                </Card.Body>
+                              </Container>
+                              <Card.Footer>with love from {user.name}</Card.Footer>
+                            </Card>
+                            <div class="progress-contstack">
+                            <div class="step"></div>
+                            <button class="btn btn-outline-primary btn-sm" onClick={shift} >Next &rarr;</button>
+                        <button class="btn btn-simple" onClick={rotateCard}>
+                          <i class="fa fa-mail-forward"></i> Manual Rotation
+                        </button>
+                        </div>
+                          </div>
+                        ))}                     
                     </div>
-                    ))}
-                  </Slider>
-                ) : (
-                  <div></div>
-                )}
+                </div>
+            </div>
+             </div>
+             <div className="back">
+                <h5 >Fill the form to send her birthday wishes</h5>
+              <div className="content">
+                <Form users={users} fetchUsers={fetchUsers} rotateCard={rotateCard} />
               </div>
             </div>
+           </div>
           </div>
-        </div>
         </Grid>
-        <Grid item xs={10} sm={5} className="appContent">
+        <Grid item xs={0} md={1} className="appContent"></Grid>
+        <Grid item xs={11} md={4} className="appContent">
         {isLoading ? (<p>Data loading, please wait.. 
           <Loader type="ThreeDots" color="#00BFFF" height={50} width={50} />
         </p>) : (

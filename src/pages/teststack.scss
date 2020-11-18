@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,700,900');
+@import url('https://fonts.googleapis.com/css?family=Palanquin:300');
+@import url('https://afeld.github.io/emoji-css/emoji.css');
+
+$aqua: #00CED1;
+$blueberry: #2575fc;
+$grape: #6a11cb;
+$darkcloud: #8f959a;
+
+.contstack {
+    margin: 1em auto;
+    height: 540px; 
+}
+
+.inner-contstack {
+    position: relative;
+    width: 100%;
+    height: 480px; 
+    max-width: 100%;
+    min-width: 360px;
+    width: 100%;
+    margin: 0 auto 100px;
+}
+
+.contentstack {
+    position: absolute;
+    opacity: 0;
+    left: 1%;
+    width: 98%;
+    margin: 0 auto;
+}
+
+.activestack {
+    display: block !important;
+    margin: 0 auto;
+    opacity: 1;
+    transition: ease-in-out 1s;
+}
+
+.cardstack {
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+    padding: 1em 0;
+    height: 470px;
+    box-sizing: border-box;
+    transition: .3s ease;
+    box-shadow: 0 3px 10px -2px rgba(0,0,0,0.35);
+
+    &:first-child,
+    &:nth-child(2) {
+        background: darken($aqua, 2%);
+        height: 8px;
+        border-radius: 5px 5px 0 0;
+        padding: 0;
+        box-shadow: none;
+    }
+  
+    &:first-child {
+        margin: 0 20px;
+        background: darken($aqua, 6%);
+    }
+  
+    &:nth-child(2) {
+        margin: 0 10px;
+    }
+  
+    .progress-contstack {
+        background: rgba($blueberry, 0.2);
+        height: 6px;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 0 0 5px 5px;
+      
+        .step {
+            background-color: $blueberry;
+            height: 6px;
+            width: 33%;
+            border-radius: 0 0 0 5px;
+        }
+    }
+}
+
+h1 {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: darken($aqua, 3%);
+    margin: 0;
+}
+
+p {
+    margin-top: 0;
+}
+
+a {
+    color: $aqua;
+    text-decoration: none;
+    position: relative;
+
+    &:before {
+        contentstack: '';
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        width: 0%;
+        border-bottom: 2px solid $aqua;
+        transition: 0.3s;
+    }
+
+    &:hover:before {
+        width: 80%;
+    }
+}

@@ -5,8 +5,6 @@ import indexStyles from "./index.module.scss";
 import developer from "../images/developer.gif";
 import "../styles/style.scss";
 import { Badge, Container, Row, Col, ListGroup, ListGroupItem } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faTwitter, faLinkedin, faStackOverflow } from '@fortawesome/free-brands-svg-icons'
 import SEO from "../components/seo";
 
 const IndexPage = () => {
@@ -17,7 +15,7 @@ const IndexPage = () => {
       <Row className={indexStyles.intro}> 
         <Col xs={12} md={8} className={indexStyles.bio}>
           <p>
-            <b style={{fontSize:"28px"}}>Hi, my name is <span style={{color:"blue"}}>Collins Akinbami.</span></b>
+            <b style={{fontSize:"28px"}}>Hi, my name is <span style={{color:"#005fff"}}>Collins Akinbami.</span></b>
             <br />
             <b style={{fontSize:"18px"}}>I'm a Software Developer, Telecoms Engineer and budding Cloud Engineer.</b>
             <br /><br />

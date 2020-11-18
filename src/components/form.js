@@ -48,7 +48,7 @@ const Form = (props) => {
         .then((response) => {
           let note = document.getElementById('formSubmit');
           setUser(initialUser);
-          props.flip2Back();
+          props.rotateCard();
           props.fetchUsers();
           setSubmitted(false)
         })
@@ -56,11 +56,7 @@ const Form = (props) => {
   };
     return (
       <div>
-        <div className='imgs'>
-         <Image align='center' src={Queen2} className='bgImage' style={{ maxWidth:"425px", maxHeight:"500px", margin:'2px', borderRadius:"20px" }} />
-        </div>
       <form className="form noValidate" autoComplete="off" onSubmit={saveWishes}>
-        <h2 align="center">Send her your wishes...</h2>
         <TextField
           id="filled-basic"
           variant='outlined'
@@ -95,20 +91,25 @@ const Form = (props) => {
           label="Message Content"
         />
         {errors.msgContent && <p className="warnings">{errors.msgContent}</p>}
-        <p id='formSubmit'></p>
-        {
-          submitted ? 
-          (
-          <button align='center' class="btn btn-primary" type="button" disabled>
-            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-            Submitting...
-          </button>
-        ) : (
-          <Button align='center' color="primary" class="btn btn-primary" onClick={saveWishes} >
-            Submit
-          </Button>
-        )
-        }
+          <p id='formSubmit'></p>
+          {
+            submitted ? 
+            (
+              <button align='center' class="btn btn-primary" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Submitting...
+              </button>
+          ) : (
+            <div>
+            <button class="btn btn-simple" rel="tooltip" title="Flip Card" onClick={props.rotateCard}>
+                <i class="fa fa-reply"></i> Back
+            </button>
+            <button align='center' color="primary" class="btn btn-primary" onClick={saveWishes} >
+              Submit
+            </button>
+            </div>
+          )
+          }
       </form>
       </div>
     );

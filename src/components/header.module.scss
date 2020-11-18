@@ -60,13 +60,14 @@
   }
   
   .nav-container {
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 0;
     right: 0;
     height: 40px;
-    background: rgba(147, 172, 240, 0.884);
-    border-top: 2px solid rgba(74, 62, 247, 0.897);
+    width: 100%;
+    background: rgba(147, 172, 240, 0.884) !important;
+    border: 2px solid rgba(74, 62, 247, 0.897);
   }
   
   .nav-list {
@@ -77,7 +78,7 @@
     padding: 0;
     list-style: none;
   
-    Button {
+    item {
       width: 71px;
       margin: 3px;
       padding: 2px;

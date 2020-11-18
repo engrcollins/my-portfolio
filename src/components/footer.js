@@ -20,7 +20,7 @@ const Footer = () => {
       <div className={footerStyles.siteFooter}>
         <div className={footerStyles.container}>
           <p>
-            Site developed with 💖 by <a href="www.twitter.com/engrcollins14">{data.site.siteMetadata.author}</a> 
+            Site developed with 💖 by <a href="www.twitter.com/engrcollins14" style={{color:'#f44f18'}}>{data.site.siteMetadata.author}</a> 
             <br />
             &copy;{" "}
             {new Date().getFullYear().toString()}{" "}

@@ -212,9 +212,9 @@ var settings = {
                             <div class="progress-contstack">
                             <div class="step"></div>
                             <button class="btn btn-outline-primary btn-sm" onClick={shift} >Next &rarr;</button>
-                        <button class="btn btn-simple" onClick={rotateCard}>
-                          <i class="fa fa-mail-forward"></i> Manual Rotation
-                        </button>
+                            <button class="btn btn-simple" onClick={rotateCard}>
+                               <i class="fa fa-mail-forward"></i> Manual Rotation
+                            </button>
                         </div>
                           </div>
                         ))}                     

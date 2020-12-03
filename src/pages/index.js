@@ -6,12 +6,20 @@ import developer from "../images/developer.gif";
 import "../styles/style.scss";
 import { Badge, Container, Row, Col, ListGroup, ListGroupItem } from 'react-bootstrap';
 import SEO from "../components/seo";
+import Zoom from 'react-reveal/Zoom';
+import Spin from 'react-reveal/Spin';
+import Flip from 'react-reveal/Flip';
+import Rotate from 'react-reveal/Rotate';
+import Flash from 'react-reveal/Flash';
+import Shake from 'react-reveal/Shake';
+import LightSpeed from 'react-reveal/LightSpeed';
 
 const IndexPage = () => {
   return(
   <Layout>
   <SEO title="Home" description="This page is the landing page" />
     <Container>
+      <Shake>
       <Row className={indexStyles.intro}> 
         <Col xs={12} md={8} className={indexStyles.bio}>
           <p>
@@ -47,19 +55,23 @@ const IndexPage = () => {
           <img src={developer} alt="developer working" style={{maxWidth:"220px", maxHeight:"235px", borderRadius:"20px"}} />
         </Col>
       </Row>
+      </Shake>
     </Container>
     <br />
 
     <div className={indexStyles.about}>
+      <Zoom>
       <p>
           I'm passionate about open-source and technology in general. I have extensive experience in designing and developing websites using HTML5, CSS, JavaScript, ReactJS, jQuery, Bootstrap, Material UI, NodeJS, PHP amongst other tools. If I am not coding, you can find me reading, working out or watching football.
       </p>
+      </Zoom>
     </div>
     <br />
 
     <hr />
     <br />
 
+    <Flip left>
     <h3><b>Tools and Technologies I Can Use</b></h3>
       <Row >
         <Col xs={6} md={6}>
@@ -67,10 +79,11 @@ const IndexPage = () => {
             <li>HTML</li>
             <li>CSS</li>
             <li>JavaScript</li>
-            <li>Bootsrap</li>
+            <li>Bootstrap</li>
             <li>jQuery</li>
+            <li>Python</li>
+            <li>PHP</li>
             <li>ReactJS</li>
-            <li>NodeJS</li>
             <li>Sass</li>
           </ul>
         </Col>
@@ -81,20 +94,26 @@ const IndexPage = () => {
             <li>Gatsby</li>
             <li>Webpack</li>
             <li>Github</li>
-            <li>PHP</li>
+            <li>NodeJS</li>
+            <li>Django</li>
             <li>MySQL</li>
             <li>MongoDB</li>
           </ul>
         </Col>
       </Row>
+      </Flip>
       <br />
 
       <hr />
       <br />
 
       <div>
+      <Rotate top left>
         <h3><b>Latest Projects</b></h3>
         <ListGroup>
+          <ListGroupItem>
+            <a href="https://techplugs.netlify.app" target="_blank">Tech Plugs</a><Badge variant="primary" style={{float:"right"}}>ReactJS</Badge>&nbsp;<Badge variant="warning" style={{float:"right"}}>Django</Badge>
+          </ListGroupItem>
           <ListGroupItem>
             <a href="https://dev-catalog.netlify.app" target="_blank">Dev Catalog</a><Badge variant="primary" style={{float:"right"}}>ReactJS</Badge>&nbsp;<Badge variant="warning" style={{float:"right"}}>JavaScript</Badge>
           </ListGroupItem>
@@ -106,6 +125,7 @@ const IndexPage = () => {
             <a href="https://collinsakinbami.netlify.app" target="_blank">Collins Akinbami</a><Badge variant="secondary" style={{float:"right"}}>Gatsby</Badge><Badge variant="warning" style={{float:"right"}}>JavaScript</Badge>
           </ListGroupItem>
         </ListGroup>
+        </Rotate>
       </div>
       <br />
 
@@ -114,9 +134,11 @@ const IndexPage = () => {
 
       <div>
       <h3><b>Featured Writing</b></h3>
+      <Flash>
         <ListGroupItem>
           <ListGroupItem><Link to="/blog/the-real-cost-of-learning">The Real Cost of Learning</Link></ListGroupItem>
         </ListGroupItem>
+      </Flash>
       </div>
       <br />
 
@@ -124,6 +146,7 @@ const IndexPage = () => {
       <br />
 
       <div>
+        <LightSpeed Left>
         <h3><b>Contact Me</b></h3>
         <p>
           I'm <b>currently open to freelance projects or full-time work.</b> If you're interested in working with me, please get in touch using one of the methods below. Or feel free to just say <i>Hi</i>. I like that too.
@@ -157,6 +180,7 @@ const IndexPage = () => {
               </ul>
               </Col>
             </Row>
+      </LightSpeed>
       </div>
   </Layout>
   )

@@ -50,7 +50,7 @@ const Blog = () => {
           return (
           <div>
             <Col xs={12} md={6} key={edge.node.id}>
-              <Card border="info" style={{ width: '23rem', height: "465px" }}>
+              <Card border="info" style={{ width: '23rem', height: "480px" }}>
               <Card.Body>
                 <Card.Title>
                   <Link to={`/blog/${edge.node.fields.slug}/`}>

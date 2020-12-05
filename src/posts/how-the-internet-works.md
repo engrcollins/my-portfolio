@@ -1,6 +1,6 @@
 ---
 title: "How The Internet Works - A Simplified Explanation"
-date: "2020-11-27"
+date: "2020-12-04"
 author: "Collins Akinbami"
 featured: "../images/how-internet-works.jpg"
 ---
@@ -29,6 +29,7 @@ In-between these destination and source computers/devices are a lot of other net
 <center><img src="../images/routers.jpg" width="70%" alt='Routers'><br />Packets routes.</center>
 <br />
 The source computer/device initiates the packets sending with the help of a modem. Data packets traverse the public telephone network using the Radio Frequency (RF) energy which can transmit signals even through walls and other objects. The modem gets these packets onto and off this RF carrier by modulation and demodulation. Stand-alone modem can be used for connecting a local network (of devices) to the Internet Service Providers(ISPs) while modern cellphones have in-built modems which make it possible for the mobile phones to access the internet via telephone network providers' infrastructures like radio towers. These telephone infrastructures are used because they are readily available and ideal.
+</p>
 <p>
 This is where the trick is really; simply put, an ISP provides access for using the internet. Breaking things down, an ISP is a company or firm that manages some special routers, pool of modems and port server, linked together, and also to other ISPs' routers so that messages from the source device(s) or network (of computers) are carried, in form of packets through the ISP network(s) to the destination device(s) or network (of computers). Oh, that's quite long! I know right. The internet consists of this whole infrastructure of networks. Just like I explained earlier, the data packets get passed on from router to router like in a relay race such that all these packets transmission occur within the twinkling of an eyelid.
 </p>
@@ -43,7 +44,7 @@ There are 3 tiers of Internet service providers, each tier buys access, based on
 <li>Tier 3 ISPs: They are the closest tier to the end consumers of internet. Hence, they provide lines and radio towers connecting different homes and business to the Tier 2 semi-major backbones. They pay for access to the tier-2 ISP(s) based on traffic generated and distribute access to these homes and business.
 </li>
 <li>
-Tier 2 ISPs: They provide and manage semi-major backbone networks of lines in regions and countries that connect to various Tier 1 ISP(s). They pay to and get access from the Tier-3 ISP(s).
+Tier 2 ISPs: They provide and manage semi-major backbone networks of lines in regions and countries that connect to various Tier 1 ISP(s). They pay to and get access from the Tier-1 ISP(s).
 </li>
 <li>
 Tier 1 ISPs: These are the giant firms that provide and manage major backbone networks. They don't pay for traffic, they rather charge other ISPs (down the hierarchy) for access through their network because they have a global reach of locations that are not under the reach of lower ISPs.

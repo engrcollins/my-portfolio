@@ -206,18 +206,24 @@ var settings = {
                                   </Col>
                                 </Row>
                                 </Card.Body>
-                              </Container>
-                              <Card.Footer>with love from {user.name}</Card.Footer>
-                            </Card>
-                            <div class="progress-contstack">
-                            <div class="step"></div>
-                            <button class="btn btn-outline-primary btn-sm" onClick={shift} >Next &rarr;</button>
-                            <button class="btn btn-simple" onClick={rotateCard}>
+                                <button class="btn btn-simple" onClick={rotateCard}>
                                <i class="fa fa-mail-forward"></i> Manual Rotation
-                            </button>
-                        </div>
+                            </button> 
+                              </Container>
+                              <Card.Footer>
+                                with love from {user.name}
+                                <br />
+                                <div>
+                                  <button className="btn btn-default btn-sm" onClick={shift} align="center">Next &rarr;</button>
+                                </div>
+                              </Card.Footer>
+                            </Card>
+                            {/*
+                            <div class="progress-contstack">
+                              <div class="step"></div>
+                            </div>*/}
                           </div>
-                        ))}                     
+                        ))}                
                     </div>
                 </div>
             </div>

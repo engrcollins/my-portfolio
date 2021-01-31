@@ -7,6 +7,10 @@ import Queen2 from '../images/queen-2.jpg';
 import Queen3 from '../images/queen-3.jpg';
 import Queen4 from '../images/queen-4.jpg';
 import Queen5 from '../images/queen-5.jpg';
+import Queen6 from '../images/queen-6.jpg';
+import Queen7 from '../images/queen-7.jpg';
+import Queen8 from '../images/queen-8.jpg';
+import Queen9 from '../images/queen-9.jpg';
 import Card from "react-bootstrap/Card";
 import { Grid, Divider} from "@material-ui/core";
 import { confirmAlert } from 'react-confirm-alert';
@@ -29,7 +33,7 @@ const Birthday = () => {
   const [isFlipped, setIsFlipped] = useState(false);
   const listHeight = 500;
   const listWidth = 420;
-  var pics = [Queen1, Queen2, Queen3, Queen4]
+  var pics = [Queen1, Queen2, Queen3, Queen4, Queen5, Queen6, Queen7, Queen8, Queen9]
   
   useEffect(() => {
     fetchUsers();
@@ -197,7 +201,7 @@ var settings = {
                                 <br />
                                 <Row>
                                   <Col xs={12} md={6}>
-                                    <Card.Img src={pics[Math.floor(Math.random() * 4)]} style={{maxWidth:"300px", maxHeight:"350px", minHeight:"220px", margin:'2px', borderRadius:"20px"}} />
+                                    <Card.Img src={pics[Math.floor(Math.random() * 9)]} style={{maxWidth:"300px", maxHeight:"350px", minHeight:"220px", margin:'2px', borderRadius:"20px"}} />
                                   </Col>
                                   <Col xs={12} md={6}>    
                                       <Card.Text style={{height:"110px"}}>

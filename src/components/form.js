@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { TextField } from '@material-ui/core';
-import { Button, Image } from 'react-bootstrap'
 import axios from 'axios';
-import Queen1 from '../images/queen-2.jpg';
-import Queen2 from '../images/queen-2.jpg';
+
 
 const Form = (props) => {
   const initialUser = {
@@ -95,21 +93,19 @@ const Form = (props) => {
           {
             submitted ? 
             (
-              <button align='center' class="btn btn-primary" type="button" disabled>
+              <button align='center' class="btn btn-success" type="button" disabled>
                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                 Submitting...
               </button>
           ) : (
-            <div>
-            <button class="btn btn-simple" rel="tooltip" title="Flip Card" onClick={props.rotateCard}>
-                <i class="fa fa-reply"></i> Back
-            </button>
             <button align='center' color="primary" class="btn btn-primary" onClick={saveWishes} >
               Submit
             </button>
-            </div>
           )
           }
+            <button id="back-button" align='center' color="primary" class="btn btn-primary" onClick={props.rotateCard}>
+                <i class="fa fa-reply"></i> Back to birthday wishes
+            </button>
       </form>
       </div>
     );

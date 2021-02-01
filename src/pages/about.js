@@ -16,16 +16,16 @@ const About = () => {
       </div>
       <div className={aboutStyles.content}>
         <p>
-          My name is Collins O'tobi Akinbami, I hail from Lagos, Nigeria. I had my elementary and high school education in Ibadan, Nigeria where I was the school Time Keeper and Head Prefect respectively. 
-          In 2009, I went for my National Diploma in Computer Engineering at The Federal Polytechnic Ede, Nigeria. There, I was granted a Polytechnic Scholarship Award  in my second(final) year. I graduated from the polytechnic with a Distinction class of grade in October 2010.
+          My name is Collins O'tobi Akinbami, I hail from <a href='https://en.wikipedia.org/wiki/Lagos' target='_blank'>Lagos, Nigeria.</a> I had my elementary and high school education in Ibadan, Nigeria where I was the school Time Keeper and Head Prefect respectively. 
+          In 2009, I went for my National Diploma in Computer Engineering at <a href='https://www.federalpolyede.edu.ng/' target='_blank'>The Federal Polytechnic Ede, Nigeria.</a> There, I was granted a Polytechnic Scholarship Award  in my second(final) year. I graduated from the polytechnic with a Distinction class of grade in October 2010.
           </p>
 
           <p>
-          My strive for better academic value took me to Obafemi Awolowo University Ile-Ife, Nigeria where I was admitted via Direct Entry to study Materials Science & Engineering in same 2010. Here, I was privileged to be the departmental Electoral Chairman that conducted & supervised departmental elections in 2014. I graduated from the ivory tower with 2nd Class Upper Division.
+          My strive for better academic value took me to <a href='https://oauife.edu.ng/' target='_blank'>Obafemi Awolowo University Ile-Ife, Nigeria</a> where I was admitted via Direct Entry to study Materials Science & Engineering in same 2010. Here, I was privileged to be the departmental Electoral Chairman that conducted & supervised departmental elections in 2014. I graduated from the ivory tower with 2nd Class Upper Division.
           </p>
 
           <p>
-          Moving on, I had the opportunity of doing my voluntary national service (otherwise known as NYSC) at Federal University of Petroleum Resources, Warri, Nigeria. I worked in the capacity of a Research and Administrative Assistant helping the head of department, lecturers and admin staff with their research and administrative works.
+          Moving on, I had the opportunity of doing my compulsory national service (otherwise known as <a href='https://nysc.gov.ng/' target='_blank'>NYSC scheme</a>) at <a href='https://fupre.edu.ng/' target='_blank'>Federal University of Petroleum Resources, Effurun-Warri, Nigeria.</a> There, I served in the capacity of a Research and Administrative Assistant helping the head of department, lecturers and admin staff with their research and administrative works.
           </p>
 
           <p>

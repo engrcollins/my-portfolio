@@ -137,6 +137,7 @@ const rotateCard = (e) =>{
                                 <Card.Title>{user.msgTitle}</Card.Title>
                                 <Card.Subtitle style={{ fontSize:'12px', fontStyle:'italic'}} >Date Posted: {user.date.substr(0, 24)}</Card.Subtitle>
                                 <br />
+                                <span style={{fontWeight: 'bold'}}> &lt;&lt;&lt; Swipe &gt;&gt;&gt; </span>
                                 <Row>
                                   <Col xs={12} md={6}>
                                     <Card.Img src={pics[Math.floor(Math.random() * 9)]} style={{maxWidth:"300px", maxHeight:"350px", minHeight:"220px", margin:'2px', borderRadius:"20px"}} />
@@ -153,7 +154,7 @@ const rotateCard = (e) =>{
                               <Card.Footer>
                                 ...with love from  <span style={{ fontSize:'16px', fontStyle:'italic', fontWeight: 'bold'}}>{user.name}</span>
                                 <br />
-                                
+                                <span style={{fontWeight: 'bold'}}> &lt;&lt;&lt; Swipe &gt;&gt;&gt; </span>
                               </Card.Footer>
                             </Card>
                         </div>

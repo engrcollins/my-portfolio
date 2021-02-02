@@ -150,6 +150,8 @@ const rotateCard = (e) =>{
                                 </Row>
                                 <br />
                                 </Card.Body>
+                                <br />
+                                <br />
                               </Container>
                               <Card.Footer>
                                 ...with love from  <span style={{ fontSize:'16px', fontStyle:'italic', fontWeight: 'bold'}}>{user.name}</span>

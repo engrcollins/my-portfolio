@@ -90,6 +90,8 @@ const rotateCard = (e) =>{
                 <Card.Text>
                   {list[index]['msgContent']}
                 </Card.Text>
+                <br />
+                <br />
               </Card.Body>
               <Card.Footer>...with love from {list[index]['name']}</Card.Footer>
             </Card>
@@ -155,6 +157,7 @@ const rotateCard = (e) =>{
                               </Container>
                               <Card.Footer>
                                 ...with love from  <span style={{ fontSize:'16px', fontStyle:'italic', fontWeight: 'bold'}}>{user.name}</span>
+                                <br />
                                 <br />
                                 <span style={{fontWeight: 'bold'}}> &lt;&lt;&lt; Swipe &gt;&gt;&gt; </span>
                               </Card.Footer>

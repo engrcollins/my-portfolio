@@ -93,10 +93,10 @@ const rotateCard = (e) =>{
                 <br />
                 <br />
               </Card.Body>
-              <Card.Footer>...with love from {list[index]['name']}</Card.Footer>
+              <br />
+              <br />
+              <Card.Footer>...with love from  <span style={{ fontSize:'16px', fontStyle:'italic', fontWeight: 'bold'}}>{list[index]['name']}</span></Card.Footer>
             </Card>
-            <br />
-            <br />
       </ListItem>
     </div>
   );
@@ -158,20 +158,22 @@ const rotateCard = (e) =>{
                               <Card.Footer>
                                 ...with love from  <span style={{ fontSize:'16px', fontStyle:'italic', fontWeight: 'bold'}}>{user.name}</span>
                                 <br />
-                                <br />
                                 <span style={{fontWeight: 'bold'}}> &lt;&lt;&lt; Swipe &gt;&gt;&gt; </span>
                               </Card.Footer>
+                              <br />
                             </Card>
+                            <br />
                         </div>
                         ))}
                 </Slider>
                 </div>
                 <br />
+                <br />
                 <button class="btn btn-info" onClick={rotateCard}>
                 <i class="fa fa-pencil-square"></i> Click here to send queen your birthday wishes.
               </button>              
           </div>
-  
+          <br />  
           </div>
           </div>
         )}
@@ -182,6 +184,8 @@ const rotateCard = (e) =>{
           <Loader type="ThreeDots" color="#00BFFF" height={50} width={50} />
         </p>) : (
           <div className="article-list">
+            <br />
+            <br />
             <h3><strong>ALL BIRTHDAY WISHES</strong></h3>
             <div className="article-search" id="list-search">
               <input
